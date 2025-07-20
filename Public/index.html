@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Our Hotel API</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏨 Welcome to Our Hotel </h1>
+    <p>This is a Node.js-based backend for managing hotel data like <strong>users (persons)</strong> and <strong>menus</strong>.</p>
+    <p>Use the following endpoints to interact with the API:</p>
+
+    <ul>
+      <li><code>GET /menu</code> - View all menu items</li>
+      <li><code>GET /menu/sweet</code> - View all sweet items</li>
+      <li><code>GET /menu/sour</code> - View all sour items</li> 
+      <li><code>GET /menu/spicy</code> - View all spicy items</li>
+      <li><code>POST /menu</code> - Add a new menu item</li>
+      <li><code>GET /persons</code> - View all registered persons -- Protected route</li>
+      <li><code>POST /persons/signup</code> - Register a new user and receive a JWT token</li>
+      <li><code>POST /persons/login</code> - Login and receive a JWT token</li>
+      
+    </ul>
+
+    <div class="note">
+      <p>🔐 For protected routes, make sure to include a valid <code>Authorization: Bearer &lt;token&gt;</code> header.</p>
+    </div>
+
+    <footer>
+      <p>Developed by <a href="https://github.com/Sarvesh9570" target="_blank">Sarvesh Pratap</a></p>
+    </footer>
+  </div>
+</body>
+</html>

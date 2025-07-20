@@ -1,6 +1,7 @@
 const express = require("express");
 const connectdb = require("./db");
 const bodyparser = require("body-parser");
+const path = require('path');
 const passport = require("./auth");
 const app = express();
 require("dotenv").config();
@@ -22,9 +23,10 @@ const logRequest = (req, res, next) => {
 app.use(logRequest); // sb me use hoga middleware all request
 //if i want to use this middleWare only person router then
 // app.use("/person",logRequest, personRoutes);
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", (req, res) => {
-  res.send("Welcome to our hotles");
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // person routes
