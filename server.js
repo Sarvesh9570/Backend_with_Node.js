@@ -23,7 +23,7 @@ const logRequest = (req, res, next) => {
 app.use(logRequest); // sb me use hoga middleware all request
 //if i want to use this middleWare only person router then
 // app.use("/person",logRequest, personRoutes);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'Public', 'index.html'));
