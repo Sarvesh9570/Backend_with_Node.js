@@ -4,7 +4,7 @@ const bodyparser = require("body-parser");
 const passport = require("./auth");
 const app = express();
 require("dotenv").config();
-const port = process.env.port_no;
+const port = process.env.port_no || 2000;
 app.use(bodyparser.json()); // http request se jo data aayega usko object m kr dega abhi humlog
 // json m bhejenge data isiliye bodyparser.json() kiye hai.
 
